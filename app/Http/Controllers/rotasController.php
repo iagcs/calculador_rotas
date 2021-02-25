@@ -46,7 +46,7 @@ class rotasController extends Controller
                 if($indice !== $tam){
                     //VERIFICA SE A POSICAO E NULA. SE FOR NULA QUER DIZER QUE JA FOI VERIFICADA
                     if($rota[$tam]!==null && $rota[$indice]!=null){
-                        $link[] = "https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=" . $rota[$tam][1] . "," . $rota[$tam][0] . " - " .  $rota[$tam][2] . ","  . $rota[$tam][3] . "&destinations=" . $rota[$indice][1] . "," . $rota[$indice][0] . " - " .  $rota[$indice][2] . ","  . $rota[$indice][3] . "&key=AIzaSyA7pGXD4jXyzXNkLnZSYg_pldaHCKM6ZvQ";
+                        $link[] = "https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=" . $rota[$tam][1] . "," . $rota[$tam][0] . " - " .  $rota[$tam][2] . ","  . $rota[$tam][3] . "&destinations=" . $rota[$indice][1] . "," . $rota[$indice][0] . " - " .  $rota[$indice][2] . ","  . $rota[$indice][3] . "&key=";
                         $response_directions[] = Http::get($link[$count2]);
                         $response2_directions[] = json_decode($response_directions[$count2]);
                         $distancia[] = $response2_directions[$count2]->rows[0]->elements[0]->distance->value;

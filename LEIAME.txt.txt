@@ -1,0 +1,5 @@
+Para Fazer rodar o programa, deve-se colocar a chave da Distance Matrix API do Google na linha 49 do arquivo rotasController.php.
+
+$link[] = "https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=" . $rota[$tam][1] . "," . $rota[$tam][0] . " - " .  $rota[$tam][2] . ","  . $rota[$tam][3] . "&destinations=" . $rota[$indice][1] . "," . $rota[$indice][0] . " - " .  $rota[$indice][2] . ","  . $rota[$indice][3] . "&key=";
+
+Insira a Chave após o 'key=' na url. 
